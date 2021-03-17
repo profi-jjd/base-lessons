@@ -93,5 +93,40 @@ public class FirstLesson {
 
         double sum = bill > 1000 ? bill - bill * 0.1 : bill;
         System.out.println(sum);
+
+        //
+        boolean cancelled = false;
+        // || или
+        System.out.println(bill > 0 || cancelled); // true
+
+        int start = 3, end = 10;
+        // && и
+        System.out.println(start < end && end < 100_000); // true
+
+        // ! не
+        System.out.println(!cancelled); // true
+        System.out.println(!(bill > 0 || cancelled)); // false
+
+        // ^ исключающее или (xor)
+        System.out.println(bill > 0 ^ !cancelled); // false
+
+        // инкремент ++ - увеличивает значение переменной на 1
+        // декремент -- - уеньшает значение переменной на 1
+
+        height = 2;
+        int result = height++ - ++height + height-- - ++height *
+                ++height + --height;
+        // 2 - 4 + 4 - 4 * 5 + 4 = -14
+        // --i сначала изменяет значение, потом возвращает ее значение
+        // i-- сначала возвращает значение переменной, потом изменяет
+        System.out.println(result);
+
+
+        // byte n = 34;
+        // int m = n;
+
+        // int n = 608;
+        // byte m = (byte) n;
+
     }
 }
