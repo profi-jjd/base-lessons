@@ -53,42 +53,37 @@ public class DecisionMaking {
             default:
                 System.out.println(sum);
         }
-        // дан номер месяца, в зависимоти от номера месяца
-        // вывести время года
-
-        // Пользователь вводит целое число с клавиатуры,
-        // необходимо вывести это число увеличенное на 2
-        // Если пользователь ввел 0, цикл прерывает работу
-
-        while (true){
-            System.out.println("Введите число");
-            int num = in.nextInt();
-            System.out.println(num + 2);
-            if (num == 0) break;
+        // switch Java 12 - экспериментальная!!! опция, которая выключена по умолчанию, поэтому ее нужно включать:
+        // добавить --enable-preview в File->Settings->Build,... ->Java Compiler->Additional command line parameters
+        /*
+        double discountSum;
+        switch (code) {
+            case 4692 -> discountSum = sum - sum * 0.3;
+            case 7024, 5984 -> discountSum = sum - sum * 0.2;
+            case 1235, 7351, 9835 -> discountSum = sum - sum * 0.1;
+            default -> {
+                System.out.println("Вам не повезло");
+                discountSum = sum;
+            }
         }
-        // вывести все четные числа от start до end
-        int start = 1, end = 14;
-        while (start <= end) {
-            if (start % 2 == 0) System.out.println(start);
-            start++;  // start = start + 1; start += 1;
-        }
+        System.out.println(discountSum);
+        */
+        // switch Java 13 - экспериментальная!!! опция, которая выключена по умолчанию, поэтому ее нужно включать:
+        // добавить --enable-preview в File->Settings->Build,... ->Java Compiler->Additional command line parameters
+        /*
+        double discountSum = switch (code) {
+            case 4692 -> sum - sum * 0.3;
+            case 7024, 5984 -> sum - sum * 0.2;
+            case 1235, 7351, 9835 -> sum - sum * 0.1;
+            default -> {
+                System.out.println("Вам не повезло");
+                yield sum; // yield используется вместо break
+            }
+        };
+        System.out.println(discountSum);
+         */
 
-        // вывести все положительные элементы последовательности
-        // 95 90 85 80 75 70 ...
-        for (int num = 95; num > 0; num -= 5) {
-            System.out.println(num);
-        }
-
-        // вывести на экран первые 20 элементов последовательности
-        // 2 4 6 8 10 и тд
-
-        for (int num = 2, i = 1; i <= 20; num += 2, i++) {
-            System.out.println(num);
-        }
-
-        System.out.println(Math.random());
-
-
+        // Задача: дан номер месяца, в зависимости от номера месяца вывести время года
 
     }
 }
