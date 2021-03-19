@@ -35,7 +35,7 @@ public class LoopingStatements {
             System.out.println(num);
         }
 
-        System.out.println(Math.random());
+        int a = 909; // объявление переменной
 
     }
 }
