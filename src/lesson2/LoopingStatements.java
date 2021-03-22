@@ -35,7 +35,8 @@ public class LoopingStatements {
             System.out.println(num);
         }
 
-        byte a = 9000; // объявление переменной
+
+
 
     }
 }
