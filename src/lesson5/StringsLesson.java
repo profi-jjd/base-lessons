@@ -2,9 +2,12 @@ package lesson5;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
+
 
 public class StringsLesson {
     public static void main(String[] args) {
+
         // char 16 бит - символ Unicode
         // от 0 до 65536 от '\u0000' до '\uffff'
 
@@ -132,25 +135,8 @@ public class StringsLesson {
         // names = String.join("! ", "строка", "строка");
         System.out.println(names);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
+
+
+

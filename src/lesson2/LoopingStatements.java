@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class LoopingStatements {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+
         // Пользователь вводит целое число с клавиатуры,
         // необходимо вывести это число увеличенное на 2
         // Если пользователь ввел 0, цикл прерывает работу
@@ -34,9 +35,6 @@ public class LoopingStatements {
         for (int num = 2, i = 1; i <= 20; num += 2, i++) {
             System.out.println(num);
         }
-
-
-
 
     }
 }
