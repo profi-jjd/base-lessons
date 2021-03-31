@@ -1,6 +1,7 @@
 package com.profi.jjd.lesson8.tst;
 
 import com.profi.jjd.lesson8.tst.logger.FileLogger;
+import com.profi.jjd.lesson8.tst.logger.ILogger;
 
 import java.io.File;
 import java.util.Properties;
@@ -8,9 +9,9 @@ import java.util.Properties;
 public class TxtHandler implements IHandler{
     private File file;
     private Properties properties;
-    private FileLogger logger;
+    private ILogger logger;
 
-    public TxtHandler(File file, FileLogger fileLogger) {
+    public TxtHandler(File file, ILogger fileLogger) {
         this.file = file;
         properties = new Properties();
         this.logger = fileLogger;
@@ -19,6 +20,7 @@ public class TxtHandler implements IHandler{
     @Override
     public void read() {
         System.out.println("Реализация метода read TxtHandler");
+        logger.printMessage("Метод read отработал");
     }
 
     @Override
