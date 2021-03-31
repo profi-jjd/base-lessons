@@ -17,7 +17,7 @@ public class TxtHandler implements IHandler{
         this.logger = fileLogger;
     }
 
-    @Override
+    @Override // void read();
     public void read() {
         System.out.println("Реализация метода read TxtHandler");
         logger.printMessage("Метод read отработал");

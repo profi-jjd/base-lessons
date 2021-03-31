@@ -2,7 +2,7 @@ package com.profi.jjd.lesson7;
 
 abstract public class Unit implements RestAble{
     protected int healthScore;
-    protected int maxHealthScore;
+    protected final int maxHealthScore;
 
     public Unit(int healthScore) {
         this.healthScore = healthScore;

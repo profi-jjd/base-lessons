@@ -1,12 +1,54 @@
 package com.profi.jjd.lesson7;
 
-public class King extends Unit{
-    private int gold = 600;
+// статический импорт
+// import static com.profi.jjd.lesson7.Settings.GOLD_COUNT;
+import com.profi.jjd.lesson7.utils.Randoms;
+
+import static com.profi.jjd.lesson7.Settings.*;
+
+final public class King extends Unit{
+    private int gold = GOLD_COUNT; // Settings.GOLD_COUNT;
     private BattleUnit[] army;
 
-    public King(int healthScore) {
-        super(healthScore);
+    public King() {
+        super(KING_HEALTH);
+        generateArmy();
     }
+
+    private void generateArmy(){  // стоимость армии 200
+        army = new BattleUnit[ARMY_COUNT];
+        if (gold < ARMY_PRICE) return;
+        for (int a = 0; a < army.length; a++) {
+            army[a] = BattleUnit.getBattleUnit();
+        }
+        minusGold(ARMY_PRICE);
+    }
+    // стоимость каждого юнита 20
+    public void addUnits(){
+        for (int i = 0; i < army.length; i++) {
+            if (army[i].isAlive()) continue;
+            if ((gold - UNIT_PRICE) < 0) return;
+            army[i] = BattleUnit.getBattleUnit();
+            minusGold(UNIT_PRICE);
+        }
+    }
+
+    public void startBattle(King enemy){
+        for (int i = 0; i < army.length; i++) {
+            int thisIndex = Randoms.getRandomInt(army.length);
+            int enemyIndex = Randoms.getRandomInt(army.length);
+            if (!army[thisIndex].isAlive() ||
+                    !enemy.army[enemyIndex].isAlive()) continue;
+            army[thisIndex].attack(enemy.army[enemyIndex]);
+            army[thisIndex].rest();
+            if (!enemy.army[enemyIndex].isAlive()) continue;
+            enemy.army[enemyIndex].attack(army[thisIndex]);
+            enemy.army[enemyIndex].rest();
+        }
+    }
+
+    // количество живых юнитов
+
 
     private boolean hasGold(){
         return gold > 0;
@@ -26,4 +68,5 @@ public class King extends Unit{
         minusGold(50);
         plusHealth(10);
     }
+
 }

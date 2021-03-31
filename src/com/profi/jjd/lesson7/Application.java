@@ -12,7 +12,7 @@ public class Application {
 
         // Knight bKnight = (Knight) bUnit1;
 
-        Unit unit = new King(34);
+        Unit unit = new King();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите тип юнита");
@@ -29,5 +29,8 @@ public class Application {
         battleUnit.attack(infantry);
 
         System.out.println(battleUnit.getAttackScore());
+
+
+
     }
 }

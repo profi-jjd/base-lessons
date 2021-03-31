@@ -1,7 +1,7 @@
 package com.profi.jjd.lesson7;
 
 public class Infantry extends BattleUnit{
-    private int additionalHealth = 7;
+    private final int additionalHealth = Settings.ADDITIONAL_HEALTH;
 
     public Infantry(int healthScore, int attackScore) {
         super(healthScore, attackScore);
