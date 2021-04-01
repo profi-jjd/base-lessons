@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
-        Knight knight = new Knight(20, 12);
+       /* Knight knight = new Knight(20, 12);
         Infantry infantry = new Infantry(34, 5);
 
         BattleUnit bUnit1 = new Knight(8, 3);
@@ -29,8 +29,15 @@ public class Application {
         battleUnit.attack(infantry);
 
         System.out.println(battleUnit.getAttackScore());
+*/
+        King king1 = new King();
+        King king2 = new King();
 
+        king1.startBattle(king2);
+        king2.startBattle(king1);
 
+        System.out.println(king1.getBattleResult());
+        System.out.println(king2.getBattleResult());
 
     }
 }

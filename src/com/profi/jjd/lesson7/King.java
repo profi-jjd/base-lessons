@@ -1,10 +1,13 @@
 package com.profi.jjd.lesson7;
 
+//import com.profi.jjd.lesson7.utils.Randoms;
+
 // статический импорт
 // import static com.profi.jjd.lesson7.Settings.GOLD_COUNT;
-import com.profi.jjd.lesson7.utils.Randoms;
 
+import static com.profi.jjd.lesson7.utils.Randoms.*;
 import static com.profi.jjd.lesson7.Settings.*;
+import static com.profi.jjd.lesson7.utils.Randoms.getRandomInt;
 
 final public class King extends Unit{
     private int gold = GOLD_COUNT; // Settings.GOLD_COUNT;
@@ -35,8 +38,8 @@ final public class King extends Unit{
 
     public void startBattle(King enemy){
         for (int i = 0; i < army.length; i++) {
-            int thisIndex = Randoms.getRandomInt(army.length);
-            int enemyIndex = Randoms.getRandomInt(army.length);
+            int thisIndex = getRandomInt(army.length);
+            int enemyIndex = getRandomInt(army.length);
             if (!army[thisIndex].isAlive() ||
                     !enemy.army[enemyIndex].isAlive()) continue;
             army[thisIndex].attack(enemy.army[enemyIndex]);
@@ -47,8 +50,13 @@ final public class King extends Unit{
         }
     }
 
-    // количество живых юнитов
-
+    public int getBattleResult(){
+        int count = 0;
+        for (BattleUnit battleUnit : army) {
+            if (battleUnit.isAlive()) count++;
+        }
+        return count;
+    }
 
     private boolean hasGold(){
         return gold > 0;
