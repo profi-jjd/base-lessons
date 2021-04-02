@@ -1,6 +1,8 @@
 package com.profi.jjd.lesson6;
 
-public class Mountain {
+import java.util.Objects;
+
+public class Mountain implements Cloneable{
     private String name;
     private int height;
 
@@ -34,6 +36,30 @@ public class Mountain {
 
     public int getHeight() {
         return height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mountain)) return false;
+        Mountain mountain = (Mountain) o;
+        return height == mountain.height &&
+                Objects.equals(name, mountain.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, height);
+    }
+
+    @Override
+    public Mountain clone() {
+        try {
+            return (Mountain) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
+
     }
 
     @Override

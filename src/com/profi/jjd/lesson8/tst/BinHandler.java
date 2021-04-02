@@ -25,4 +25,5 @@ public class BinHandler implements IHandler{
     public void write() {
         System.out.println("Реализация метода write BinHandler");
     }
+
 }
