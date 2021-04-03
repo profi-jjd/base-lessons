@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson9;
+package com.profi.jjd.lesson9.figures;
 
 import java.util.Objects;
 

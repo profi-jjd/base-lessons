@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson9;
+package com.profi.jjd.lesson9.figures;
 
 import java.util.Arrays;
 
@@ -7,6 +7,10 @@ public class Figure {
 
     public Figure(int pointsCount) {
         this.points = new Point[pointsCount];
+    }
+
+    public Point[] getPoints() {
+        return points;
     }
 
     public void addPoint(Point point) {

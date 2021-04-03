@@ -1,10 +1,12 @@
 package com.profi.jjd.lesson9;
 
-import com.profi.jjd.lesson6.Climber;
+import com.profi.jjd.lesson9.figures.Figure;
+import com.profi.jjd.lesson9.figures.Point;
+
+import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        Object o = new Climber();
 
         Point a = new Point(45, 12);
         Point b = new Point(45, 12);
@@ -19,6 +21,10 @@ public class Application {
         first.addPoint(b);
 
         Figure second = first.clone();
+        System.out.println(second == first); // false
+        System.out.println(second.equals(first)); // true
+        System.out.println(second.getPoints() == first.getPoints()); // false
+        System.out.println(Arrays.equals(second.getPoints(), first.getPoints())); // true
 
     }
 }
