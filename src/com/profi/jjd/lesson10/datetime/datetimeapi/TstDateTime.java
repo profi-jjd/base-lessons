@@ -25,10 +25,10 @@ public class TstDateTime {
 //        TimeExample.getLocalTimeDescription();
 
         // работа с датой и временем LocalDateTime (примеры):
-//        DateTimeExample.getLocalDateTimeDescription();
+        DateTimeExample.getLocalDateTimeDescription();
 
         // работа с временными зонами ZonedDateTime (примеры):
-        ZonedDateTimeExample.getZonedDescription();
+//        ZonedDateTimeExample.getZonedDescription();
 
     }
 }

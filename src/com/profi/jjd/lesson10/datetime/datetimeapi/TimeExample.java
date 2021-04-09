@@ -85,6 +85,7 @@ public class TimeExample {
         System.out.println("количество часов между 20:30:10 и 23:10:56 = " + between);
         between = Duration.between(first, second).toMinutes();  // количество минут между 20:30:10 и 23:10:56
         System.out.println("количество минут между 20:30:10 и 23:10:56 = " + between);
+                                               // начиная с java 9
         between = Duration.between(first, second).toSeconds(); // количество секунд между 20:30:10 и 23:10:56
         System.out.println("количество секунд между 20:30:10 и 23:10:56 = " + between);
 

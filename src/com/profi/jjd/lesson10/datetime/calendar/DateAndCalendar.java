@@ -53,7 +53,7 @@ public class DateAndCalendar {
         // Создание григорианского календаря на основе объекта Date
         Calendar calendarFromDate = new GregorianCalendar();
         calendarFromDate.setTime(currentDate);
-        System.out.println("calendarFromDate: " + currentCalendar);
+        System.out.println("calendarFromDate: " + calendarFromDate);
 
         // получить объект Date из Calendar:
         Date birthdayDate = birthday.getTime();

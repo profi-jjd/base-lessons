@@ -18,7 +18,9 @@ public class DateTimeExample {
         System.out.println("текущая дата и время" + current);
 
         // Установка определенной даты и времени (в описани класса посмотрите использование метода с разными парамертами  - ctrl + правая кнопка мыши)
-        LocalDateTime some = LocalDateTime.of(2018, Month.OCTOBER, 20, 15, 45);
+        LocalDateTime some = LocalDateTime.of(
+                2018, Month.OCTOBER, 20,
+                15, 35);
         // java.time.Month содержит все месяцы
         System.out.println("some " + some);
 
@@ -58,16 +60,18 @@ public class DateTimeExample {
         boolean isEqual = first.isEqual(likeFirst);
         System.out.println("isEqual: 10 июля 1999 10:20 / 10 июля 1999 10:20 " + isEqual);
 
-        // isAfter - возвращает true, если вызывающая метод дата идет после той, что передается в аргументе и false, если нет
+        // isAfter - возвращает true, если вызывающая метод дата идет после той,
+        // что передается в аргументе и false, если нет
         boolean isAfter = second.isAfter(first);
         System.out.println("isAfter: 1 апреля 2057 22:30 / 10 июля 1999 10:20 " + isAfter);
 
-        // isBefore - возвращает true, если вызывающая метод дата идет до той, что передается в аргументе и false, если нет
+        // isBefore - возвращает true, если вызывающая метод дата идет до той,
+        // что передается в аргументе и false, если нет
         boolean isBefore = first.isBefore(second);
         System.out.println("isBefore: 10 июля 1999 10:20 / 1 апреля 2057 22:30 " + isBefore);
 
-        // Можно определить количество секунд, минут, часов, дней, недель, месяцев, лет и тд между датами
-        //
+        // Можно определить количество секунд, минут, часов, дней, недель, месяцев,
+        // лет и тд между датами
 
         first = LocalDateTime.of(1999, Month.JULY, 10, 10, 20); // 10 июля 1999 10:20
         second = LocalDateTime.of(2057, Month.APRIL, 1, 22, 30); // 1 апреля 2057 22:30
