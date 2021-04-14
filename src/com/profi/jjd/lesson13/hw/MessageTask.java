@@ -26,15 +26,16 @@ public class MessageTask {
         return null;
     }
 
-    public static void removeEach(List<Message> messageList, Message.MessagePriority priority) {
-        // TODO: удалить из коллекции каждое сообщение с заданным приоритетом
-        //  вывод в консоль до удаления и после удаления
-
+    public static List<Message> copyEach(List<Message> messageList, Message.MessagePriority priority) {
+        // TODO: создать коллекцию и передать в нее ссылки на каждое сообщение с заданным приоритетом
+        //  метод должен вернуть новую коллекцию
+        return null;
     }
 
-    public static void removeOther(List<Message> messageList, Message.MessagePriority priority) {
-        // TODO: удалить из коллекции все сообщения, кроме тех, которые имеют заданный приоритет
-        //  вывод в консоль до удаления и после удаления
+    public static List<Message> copyOther(List<Message> messageList, Message.MessagePriority priority) {
+        // TODO: создать коллекцию и передать в нее ссылки на все сообщения, кроме тех, которые имеют заданный приоритет
+        //  метод должен вернуть новую коллекцию
+        return null;
     }
 
     public static void main(String[] args) {

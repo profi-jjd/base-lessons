@@ -2,6 +2,7 @@ package com.profi.jjd.lesson13;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class CollectionApp {
     public static void main(String[] args) {
@@ -29,7 +30,21 @@ public class CollectionApp {
             student.setAge(student.getAge() + 1);
         }
 
+        LinkedList<Student> studentLinkedList = new LinkedList<>();
+        studentLinkedList.add(student1);
+        studentLinkedList.addFirst(student3);
+        studentLinkedList.addLast(student3);
+        studentLinkedList.add(2, student2);
 
+        studentLinkedList.remove(student4);
+        studentLinkedList.remove(0);
+        studentLinkedList.removeLast();
+        studentLinkedList.removeFirst();
+
+        for (Student student : studentLinkedList) {
+            if (student.getAge() < 30) studentArrayList.add(student);
+        }
+        
 
 
     }

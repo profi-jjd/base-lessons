@@ -1,10 +1,5 @@
 package com.profi.jjd.lesson13.hw;
 
-// Создать список объетов List<Employee> (использовать метод employeeGenerator)
-// и сортировать по:
-// имени
-// имени и зарплате
-// имени, зарплате, возрасту и компании
 
 import java.util.ArrayList;
 import java.util.List;
