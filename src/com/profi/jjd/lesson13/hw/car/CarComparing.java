@@ -1,6 +1,6 @@
-package com.profi.jjd.lesson13.hw.compare;
+package com.profi.jjd.lesson13.hw.car;
 
-public class ComparingExample {
+public class CarComparing {
     public static void main(String[] args) {
 
         // сортировать по значениям свойств: price, color, brand

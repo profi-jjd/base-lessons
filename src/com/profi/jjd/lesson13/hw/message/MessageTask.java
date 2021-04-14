@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson13.hw;
+package com.profi.jjd.lesson13.hw.message;
 
 import java.util.*;
 

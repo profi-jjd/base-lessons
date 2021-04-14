@@ -1,8 +1,9 @@
 package com.profi.jjd.lesson13;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private String surname;
     private int age;
@@ -60,4 +61,32 @@ public class Student {
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public int compareTo(Student o) {
+        // отрицательное - текущий объект меньше
+        // 0 - если объекты равны
+        // положительное - текущий объект больше
+        return Integer.compare(this.age, o.age);
+    }
+
+    public static class AgeComparator implements Comparator<Student> {
+        // отрицательное - o1 меньше
+        // 0 - если объекты равны
+        // положительное - o1 больше
+        @Override
+        public int compare(Student o1, Student o2) {
+            return Integer.compare(o1.age, o2.age);
+        }
+    }
+
+    public static class NameComparator implements Comparator<Student> {
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o1.name.compareToIgnoreCase(o2.name);
+        }
+    }
+
+
 }

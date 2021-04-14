@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson13.hw.compare;
+package com.profi.jjd.lesson13.hw.car;
 
 public class Car {
     private String color;
