@@ -70,7 +70,9 @@ public class CollectionApp {
         Comparator<Student> comparator = new Student.AgeComparator()
                 .thenComparing(new Student.NameComparator());
         TreeSet<Student> studentTreeSet2 = new TreeSet<>(comparator);
-
+        studentTreeSet2.add(student1);
+        studentTreeSet2.add(student4);
+        studentTreeSet2.add(student3);
 
 
 
