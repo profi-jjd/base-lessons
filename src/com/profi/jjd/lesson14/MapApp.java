@@ -1,8 +1,7 @@
 package com.profi.jjd.lesson14;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.ref.WeakReference;
+import java.util.*;
 
 public class MapApp {
     public static void main(String[] args) {
@@ -53,6 +52,53 @@ public class MapApp {
         }
         // HashMap<String, ArrayList<Integer>>
         // HashMap<String, Map<Integer, ArrayList<Integer>>>
+
+        EnumMap<User.Role, ArrayList<User>> enumMap =
+                new EnumMap<>(User.Role.class);
+        enumMap.put(User.Role.USER, new ArrayList<>(Arrays.asList(qwe, cvb)));
+        enumMap.put(User.Role.ADMIN, new ArrayList<>(Arrays.asList(asd, zxc)));
+        System.out.println(enumMap.get(User.Role.USER)); // ArrayList<User>
+
+        User newUser = new User("new", "new123", User.Role.ADMIN);
+        enumMap.get(newUser.getRole()).add(newUser);
+
+        //перечисление User.Role.values()[USER, ADMIN]
+        //мапа values[ArrayList<User>, ArrayList<User>]
+        // values[User.Role.USER.ordinal()]
+
+
+        TreeMap<String, User> treeMap = new TreeMap<>(userHashMap);
+        System.out.println(treeMap);
+
+        // вевести логины пользователей с ролью ADMIN
+        System.out.println(treeMap.entrySet()); // пары Set
+        System.out.println(treeMap.keySet()); // только ключи Set
+        System.out.println(treeMap.values()); // только значения Collection
+
+        for (Map.Entry<String, User> entry : treeMap.entrySet()) {
+            if (entry.getValue().getRole() == User.Role.ADMIN) {
+                System.out.println(entry.getValue().getLogin());
+            }
+        }
+
+        // LinkedHashMap
+        User strong = new User("strong", "strong123", User.Role.ADMIN);
+        WeakReference<User> weak = new WeakReference<>(strong);
+        strong = null;
+
+        WeakHashMap<String, User> weakHashMap = new WeakHashMap<>();
+
+        // HashMap
+        //1 "qwe", qwe
+        //34 "asd", asd
+        //1 "tye", tye
+
+        // Entry[("asd", asd)+KeyHashCode,Entry("qwe", qwe)+KeyHashCode+next]
+        //                                Entry("tye", tye)+KeyHashCode+next
+        //                                Entry("rtt", qqw)+KeyHashCode+next
+
+
+
 
 
 

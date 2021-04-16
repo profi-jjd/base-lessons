@@ -6,6 +6,12 @@ public class MessageTask {
     public static void countEachPriority(List<Message> messageList) {
         // TODO:  Подсчитать количество сообщений для каждого приоритела
         //  Ответ в консоль
+        // LOW, MEDIUM, HIGH, URGENT;
+        // [ 0, 0     , 0   , 0    ]
+        int[] counts = new int[Message.MessagePriority.values().length];
+        for (Message message : messageList) {
+            counts[message.getPriority().ordinal()]++;
+        }
     }
 
     public static void countEachCode(List<Message> messageList) {
@@ -29,6 +35,7 @@ public class MessageTask {
     public static void uniqueMessageCount(List<Message> messageList) {
         // TODO: Подсчитать количество уникальных сообщений
         //  Ответ в консоль
+        System.out.println(new HashSet<>(messageList).size());
     }
 
     public static List<Message> uniqueMessagesInOriginalOrder(List<Message> messageList) {
@@ -36,7 +43,7 @@ public class MessageTask {
         //  в котором они встретились в первоначальном списке
         //  Например, было: [{URGENT, 4}, {HIGH, 9}, {LOW, 3}, {HIGH, 9}]
         //  на выходе: [{URGENT, 4}, {HIGH, 9}, {LOW, 3}]
-        return null;
+        return new ArrayList<>(new LinkedHashSet<>(messageList));
     }
 
     public static List<Message> copyEach(List<Message> messageList, Message.MessagePriority priority) {
