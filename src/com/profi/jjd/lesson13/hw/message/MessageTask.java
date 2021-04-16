@@ -11,6 +11,19 @@ public class MessageTask {
     public static void countEachCode(List<Message> messageList) {
         // TODO: Подсчитать количество сообщений для каждого кода сообщения
         //  Ответ в консоль
+        // HashMap<код сообщения, количество сообщений>
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        for (Message message : messageList) {
+            int CODE = message.getCode();
+
+            countMap.put(CODE, countMap.getOrDefault(CODE, 0) + 1);
+
+            if (countMap.containsKey(CODE)) {
+                countMap.put(CODE, countMap.get(CODE) + 1);
+            } else {
+                countMap.put(CODE, 1);
+            }
+         }
     }
 
     public static void uniqueMessageCount(List<Message> messageList) {
