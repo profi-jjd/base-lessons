@@ -3,6 +3,9 @@ package com.profi.jjd.lesson16;
 import com.profi.jjd.lesson15.education.Course;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamAPI {
@@ -60,14 +63,55 @@ public class StreamAPI {
                 .orElse(Course.getInstance()); // Course
         System.out.println(maxByDuration);
 
+        // массив курсов, стоимость которых больше 20000
+        Course[] coursesArr = courses.stream()
+                .filter(course -> course.getPrice() > 20000)
+                .toArray(Course[]::new); // ссылка на конструктор массива Course[]
+                // .toArray(); Object[]
+        System.out.println(Arrays.toString(coursesArr));
 
+        List<Course> courseList = courses.stream()
+                .filter(course -> course.getDuration() < 4)
+                .peek(course -> course.setPrice(course.getPrice() + 10000))
+                .collect(Collectors.toList());
 
+        Set<Course> courseSet= courses.stream()
+                .filter(course -> course.getDuration() < 4)
+                .collect(Collectors.toSet());
 
+        ArrayList<Course> courseArrayList = courses.stream()
+                .distinct()
+                .sorted(Comparator.comparing(Course::getDuration)
+                                .thenComparing(Course::getPrice))
+                .collect(Collectors.toCollection(ArrayList::new));
 
+        colors = new String[]{"blue", "yellow", "black", "white", "black"};
+        Map<String, Integer> colorMap = Arrays.stream(colors)
+                .collect(Collectors.toMap(
+                        Function.identity(), // правила создания ключей,
+                        color -> color.length(), // или String::length, правила создания значений,
+                        (item1, item2) -> item1 // если ключи одинаковые
+                ));
 
+        // map, flatMap
+        String[][] strings = {
+                {"67", "33", "0", "1"},
+                {"554", "900", "33"},
+                {"477", "477", "47111"},
+        };
 
+        String[][] strings1 = Arrays.stream(strings)
+                .map(arr -> Arrays.stream(arr).distinct()
+                        .sorted()
+                        .toArray(String[]::new))
+                .toArray(String[][]::new);
+        System.out.println(Arrays.deepToString(strings1));
 
-
+        String[] strings2 = Arrays.stream(strings)
+                .flatMap(arr -> Arrays.stream(arr).distinct())
+                .sorted()
+                .toArray(String[]::new);
+        System.out.println(Arrays.toString(strings2));
 
 
     }
