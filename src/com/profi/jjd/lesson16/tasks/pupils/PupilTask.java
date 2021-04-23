@@ -1,10 +1,9 @@
 package com.profi.jjd.lesson16.tasks.pupils;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class PupilTask {
     public static void main(String[] args) {
@@ -26,26 +25,84 @@ public class PupilTask {
         ));
         System.out.println(pupils);
 
-        // 1. Разделить учеников на две группы: мальчиков и девочек. Результат: Map<Pupil.Gender, ArrayList<Pupil>>
+        // 1. Разделить учеников на две группы: мальчиков и девочек.
+        // Результат: Map<Pupil.Gender, ArrayList<Pupil>>
+
+        // Map<Pupil.Gender, ArrayList<Pupil>> Pupil::getGender
+        // Pupil.Gender.MALE : ArrayList<Pupil>: "Женя", "Олег", "Иван"
+        // Pupil.Gender.FEMALE : ArrayList<Pupil>: "Алена",
+        Map<Pupil.Gender, ArrayList<Pupil>> byGender = pupils.stream()
+                .collect(
+                        Collectors.groupingBy(Pupil::getGender,
+                                Collectors.toCollection(ArrayList::new))
+                );
 
         // 2. Найти средний возраст учеников
+        double avgAge = pupils.stream()
+                .mapToInt(pupil-> LocalDate.now().getYear() - pupil.getBirth().getYear())
+                .average().orElse(0);
 
         // 3. Найти самого младшего ученика
+        Pupil minAge = pupils.stream()
+                .max(Comparator.comparing(Pupil::getBirth))
+                .get();
 
         // 4. Найти самого взрослого ученика
 
         // 5. Собрать учеников в группы по году рождения
+        Map<Integer, List<Pupil>> byYear = pupils.stream()
+                .collect(
+                        Collectors.groupingBy(pupil -> pupil.getBirth().getYear())
+                );
 
         // 6. Оставить учеников с неповторяющимися именами,
         // имена и дату рождения оставшихся вывести в консоль.
-        // Например, [Иван, Александра, Ольга, Иван, Ольга] -> [Иван, Александра, Ольга]
 
-        // 7. Отсортировать по полу, потом по дате рождения, потом по имени (в обратном порядке), собрать в список (List)
+        // 7. Отсортировать по полу, потом по дате рождения,
+        // потом по имени (в обратном порядке), собрать в список (List)
+        pupils.sort(
+                Comparator.comparing(Pupil::getGender)
+                    .thenComparing(Comparator.comparing(Pupil::getBirth))
+                    .thenComparing(Comparator.comparing(Pupil::getName).reversed())
+        );
 
         // 8. Вывести в консоль всех учеников в возрасте от N до M лет
 
         // 9. Собрать в список всех учеников с именем=someName
+        String name = "Петр";
+        List<Pupil> byName = pupils.stream()
+                .filter(pupil -> pupil.getName().equals(name))
+                .collect(Collectors.toList());
 
-        // 10. Собрать Map<Pupil.Gender, Integer>, где Pupil.Gender - пол, Integer - суммарный возраст учеников данного пола
+        // 10. Собрать Map<Pupil.Gender, Integer>,
+        // где Pupil.Gender - пол, Integer - суммарный возраст учеников данного пола
+
+        // Pupil.Gender, Integer
+        // Pupil.Gender.MALE : 25
+        // Pupil.Gender.FEMALE : 6
+        Map<Pupil.Gender, Integer> genderAge =  pupils.stream()
+                .collect(Collectors.groupingBy(Pupil::getGender,
+                        Collectors.summingInt(pupil -> LocalDate.now().getYear() - pupil.getBirth().getYear())));
+
+
+        // IO API
+        // Сериализация и десериализация
+        // NIO API
+
+        // Вложенные и анонимные классы
+        // Паттерны
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

@@ -1,5 +1,7 @@
 package com.profi.jjd.lesson16.tasks.tansactions;
 
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TransactionsTask {
@@ -23,6 +25,14 @@ public class TransactionsTask {
 
         // TODO:: 1. собрать Map<String, Long>,
         //  где String - номер (number) аккаунта, Long - сумма транзакций (sum) по аккаунту
+
+        Map<String, Long> first = transactionStream
+                .collect(Collectors.toMap(
+                        transaction -> transaction.getAccount().getNumber(),
+                        transaction -> transaction.getSum(),
+                        (item1, item2) -> item1 + item2
+                ));
         // TODO: 2. найти сумму транзакций по каждому аккаунту
+
     }
 }

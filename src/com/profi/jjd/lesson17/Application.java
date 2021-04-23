@@ -23,5 +23,10 @@ public class Application {
         // Serial GC до j9
         // Parallel GC j9
         // G1 j11
+
+        // -XX:+PrintFlagsFinal
+        long used = Runtime.getRuntime().totalMemory() -
+                Runtime.getRuntime().freeMemory();
+        System.out.println(used);
     }
 }
