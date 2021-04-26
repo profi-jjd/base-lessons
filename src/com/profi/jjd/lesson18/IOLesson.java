@@ -17,5 +17,8 @@ public class IOLesson {
         TxtHandler txtHandler = new TxtHandler(new File("file.txt"));
         // StandardCharsets.UTF_8
         System.out.println(txtHandler.writeToFile(text.getBytes()));
+        System.out.println(txtHandler.writeFromConsole());
+        String fromFile = new String(txtHandler.readFromFile());
+        System.out.println(fromFile);
     }
 }

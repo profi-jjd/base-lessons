@@ -1,3 +1,5 @@
 1. Написать декораторы, наследующиеся от FilterOutputStream и FilterInputStream,
- шифрующие и дешифрующие исходящие и входящие байты XOR-шифрованием.
+ шифрующие и дешифрующие исходящие и входящие байты XOR-шифрованием. ^
 
+программа -> decorator(outputStream) -> outputStream
+программа <- decorator(inputStream) <- inputStream

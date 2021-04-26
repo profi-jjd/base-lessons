@@ -1,9 +1,7 @@
 package com.profi.jjd.lesson18.handlers;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 public class TxtHandler extends FileHandler{ // .txt
 
@@ -28,6 +26,30 @@ public class TxtHandler extends FileHandler{ // .txt
         }
     }
 
+    public boolean writeFromConsole(){
+        boolean result = false;
+        try (FileOutputStream fileOutput = new FileOutputStream(file, true);
+             BufferedOutputStream buffer = new BufferedOutputStream(fileOutput)){
+            // new BufferedOutputStream(fileOutput, размер буфера)
+
+            // программа -> decorator(outputStream) -> outputStream
+            // программа <- decorator(inputStream) <- inputStream
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                System.out.println("Введите данные или stop для выхода");
+                String userInput = scanner.nextLine();
+                if (userInput.equals("stop")) break;
+                buffer.write((userInput+"\r\n").getBytes());
+            }
+            result = true;
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не удалось найти");
+        } catch (IOException e){
+            System.out.println("Ошиба записи в файл");
+        }
+        return result;
+    }
+
 
 
     @Override
@@ -48,6 +70,21 @@ public class TxtHandler extends FileHandler{ // .txt
 
     @Override
     public byte[] readFromFile() {
-        return new byte[0];
+        byte[] result = null;
+        try (FileInputStream fileInput = new FileInputStream(file);
+             ByteArrayOutputStream byteArray = new ByteArrayOutputStream()){
+
+            byte[] buf = new byte[512];
+            int readCount;
+            while ((readCount = fileInput.read(buf)) != -1) {
+                byteArray.write(buf, 0, readCount);
+            }
+            result = byteArray.toByteArray();
+        } catch (FileNotFoundException e){
+            System.out.println("Файл не был найден");
+        } catch (IOException e) {
+            System.out.println("Ошибка чтения из файла");
+        }
+        return result;
     }
 }
