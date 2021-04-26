@@ -27,7 +27,7 @@ IO API предназначен для чтения данных из ресур
 
 Наследники:
 1. [FileInputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileInputStream.html) - 
-   поток вывода, который содержит методы, записывающие данные в файл;
+   поток ввода, содержит методы, описывающие чтение данных из файла;
 2. [ByteArrayInputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/ByteArrayInputStream.html) -
    позволяет использовать буфер в памяти как InputStream. Входным источником является массив байт.
 3. [ObjectInputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/ObjectInputStream.html) -
@@ -51,7 +51,7 @@ IO API предназначен для чтения данных из ресур
 
 Наследники:
 1. [FileOutputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileOutputStream.html) -
-   поток ввода, который содержит методы, читающие данные из файла;
+   поток вывода, содержит методы, отвечающие за запись в файл;
 2. [ByteArrayOutputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/ByteArrayOutputStream.html) -
    позволяет использовать буфер в памяти как OutputStream. Выходным источником является массив байт.
 3. [ObjectOutputStream](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/ObjectOutputStream.html) -
