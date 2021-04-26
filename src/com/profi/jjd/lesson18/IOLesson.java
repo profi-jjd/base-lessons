@@ -1,8 +1,10 @@
 package com.profi.jjd.lesson18;
 
+import com.profi.jjd.lesson18.handlers.ImgHandler;
 import com.profi.jjd.lesson18.handlers.TxtHandler;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class IOLesson {
@@ -20,5 +22,18 @@ public class IOLesson {
         System.out.println(txtHandler.writeFromConsole());
         String fromFile = new String(txtHandler.readFromFile());
         System.out.println(fromFile);
+
+        ImgHandler handler = new ImgHandler(new File("img.jpg"));
+        byte[] bytes;
+        try {
+            bytes = handler.readFromFile();
+            handler.setFile(new File("newImg.jpg"));
+            handler.writeToFile(bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 }
