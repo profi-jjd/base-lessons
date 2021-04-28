@@ -1,7 +1,9 @@
 package com.profi.jjd.lesson19.serialization.school;
 
 
-public class Human {
+import java.io.Serializable;
+
+public class Human implements Serializable {
     protected String name = "Человек";
     protected int age;
 

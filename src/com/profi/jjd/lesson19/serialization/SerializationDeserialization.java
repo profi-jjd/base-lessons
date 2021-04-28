@@ -4,9 +4,14 @@ import com.profi.jjd.lesson19.serialization.school.Director;
 import com.profi.jjd.lesson19.serialization.school.Group;
 import com.profi.jjd.lesson19.serialization.school.Pupil;
 
+import java.io.Externalizable;
+import java.io.File;
+import java.io.Serializable; // интерфейс - маркер
+
 
 public class SerializationDeserialization {
     public static void main(String[] args) {
+
         Pupil pupil1 = new Pupil();
         pupil1.setAge(7);
         pupil1.setName("Алексей");
@@ -26,6 +31,17 @@ public class SerializationDeserialization {
         System.out.println(pupil1);
         System.out.println("pupil2: " + pupil2);
         System.out.println(director);
+
+        BinHandler binHandler = new BinHandler(new File("school.bin"));
+        binHandler.writeToFile(pupil1);
+
+        Pupil fromFile = binHandler.readFromFile();
+        System.out.println(fromFile);
+
+
+
+
+
 
 
     }

@@ -1,7 +1,9 @@
 package com.profi.jjd.lesson19.serialization.school;
 
 
-public class Group {
+import java.io.Serializable;
+
+public class Group implements Serializable {
     private String title;
 
     public Group(String title) {
