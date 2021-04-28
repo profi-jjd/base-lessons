@@ -38,11 +38,9 @@ public class SerializationDeserialization {
         Pupil fromFile = binHandler.readFromFile();
         System.out.println(fromFile);
 
-
-
-
-
-
+        binHandler.writeToFile(director);
+        Director directorFromFile = binHandler.readFromFile();
+        System.out.println(directorFromFile);
 
     }
 }

@@ -11,7 +11,7 @@ public class BinHandler {
 
     public <T> boolean writeToFile(T object){
         boolean result = false;
-        try (FileOutputStream fileOutput = new FileOutputStream(file);
+        try (FileOutputStream fileOutput = new FileOutputStream(file); // , true
              ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput)){
             objectOutput.writeObject(object);
             result = true;
@@ -22,15 +22,13 @@ public class BinHandler {
     }
 
     public <T> T readFromFile() {
-        Object o = null;
+        T o = null;
         try (FileInputStream fileInput = new FileInputStream(file);
              ObjectInputStream objectInput = new ObjectInputStream(fileInput)){
-            o = objectInput.readObject();
+            o = (T) objectInput.readObject();
         }  catch (IOException | ClassNotFoundException e) {
             System.out.println("IOException или ClassNotFoundException");
         }
-        return (T) o;
+        return  o;
     }
-
-
 }

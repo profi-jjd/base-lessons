@@ -1,8 +1,9 @@
 package com.profi.jjd.lesson19.serialization.socketstream;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class SimpleMessage {
+public class SimpleMessage implements Serializable {
     private String sender;
     private String text;
     private LocalDateTime dateTime;

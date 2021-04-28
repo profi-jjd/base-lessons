@@ -1,7 +1,12 @@
 package com.profi.jjd.lesson19.serialization.school;
 
 
-public class Director extends Human {
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
+public class Director extends Human implements Externalizable {
     private int rating;
 
     public Director() { }
@@ -25,5 +30,17 @@ public class Director extends Human {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeInt(rating);
+        out.writeInt(age); // writeUTF(string);
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        rating = in.readInt();
+        age = in.readInt();
     }
 }
