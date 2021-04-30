@@ -3,7 +3,17 @@ package com.profi.jjd.lesson20;
 import java.nio.ByteBuffer;
 
 public class NIOBuffer {
+    /*ByteBuffer
+    CharBuffer
+    DoubleBuffer
+    FloatBuffer
+    IntBuffer
+    LongBuffer
+    ShortBuffer*/
     public static void main(String[] args) {
+        // capacity - емкость (не меняется после установки)
+        // position - текущая позиция в буфере (изначально 0)
+        // limit - до какого значения можно читать / писать данные (изначально равен capacity)
         ByteBuffer buffer = ByteBuffer.allocate(16);
         assert buffer.position() == 0;
         assert buffer.capacity() == 16;
@@ -52,5 +62,7 @@ public class NIOBuffer {
         assert buffer.limit() == 16;
         assert buffer.remaining() == 16;
 
+        buffer.compact();
+        // VM options для включения assert: -ea
     }
 }

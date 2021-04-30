@@ -43,7 +43,8 @@ public class Server {
             serverChannel.bind(new InetSocketAddress(8090));
             // перевод в неблокирующий режим
             serverChannel.configureBlocking(false);
-            // регистрируем канал в селекторе на все допустимые события (для serverSocket - OP_ACCEPT)
+            // регистрируем канал в селекторе на все допустимые события
+            // (для serverSocket - OP_ACCEPT)
             serverChannel.register(selector, serverChannel.validOps());
         }
 
@@ -82,6 +83,7 @@ public class Server {
                 // isWritable канал готов к отправке данных
                 else if (key.isValid() && key.isWritable()){
                     // записываем данные в канал
+                    // // client ====>
                     System.out.println("запись данных в канал...");
                     writeData((SocketChannel)key.channel(), key);
                 }
@@ -98,7 +100,6 @@ public class Server {
         }
 
         private void readData(SocketChannel channel){
-            // готовим буфер для чтения данных
             byteBuffer.clear();
 
             try {
@@ -110,7 +111,7 @@ public class Server {
                     channel.close();
                 }
 
-                // готовим буфер для записи
+
                 byteBuffer.flip();
 
                 Set<SelectionKey> keys = selector.keys();
@@ -133,6 +134,7 @@ public class Server {
 
         private void writeData(SocketChannel channel, SelectionKey key) throws IOException {
             //  записываем данные из буфера
+
             channel.write(byteBuffer);
             // готовим для следующей записи
             byteBuffer.rewind();
@@ -140,3 +142,14 @@ public class Server {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
