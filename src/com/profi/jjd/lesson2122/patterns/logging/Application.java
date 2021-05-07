@@ -1,5 +1,6 @@
 package com.profi.jjd.lesson2122.patterns.logging;
 
+import com.profi.jjd.lesson2122.patterns.logging.decorator.CodeDecorator;
 import com.profi.jjd.lesson2122.patterns.logging.decorator.DateDecorator;
 import com.profi.jjd.lesson2122.patterns.logging.strategy.ConsoleLogger;
 import com.profi.jjd.lesson2122.patterns.logging.strategy.FileLogger;
@@ -12,7 +13,7 @@ public class Application {
         inProgram.setLogger(new DateDecorator(new FileLogger("log.txt")));
         inProgram.action();
 
-        inProgram.setLogger(new ConsoleLogger());
+        inProgram.setLogger(new CodeDecorator(new DateDecorator(new ConsoleLogger())));
         inProgram.action();
     }
 }
