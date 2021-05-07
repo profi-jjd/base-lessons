@@ -16,4 +16,6 @@ public class ClassInProgram {
     public void action(){
         logger.log("Логирование действий");
     }
+
+
 }
