@@ -1,34 +1,111 @@
-READER Thread-1выбрал курс Course{price=19488, duration=1, name='C++'}
-READER Thread-1выбрал курс Course{price=54577, duration=3, name='C++'}
-READER Thread-1выбрал курс Course{price=23487, duration=2, name='JJD'}
-READER Thread-1выбрал курс Course{price=53962, duration=4, name='Node js'}
-READER Thread-1выбрал курс Course{price=33726, duration=1, name='JJD'}
-READER Thread-1выбрал курс Course{price=40519, duration=3, name='Node js'}
-READER Thread-1выбрал курс Course{price=30333, duration=3, name='Python'}
-READER Thread-1выбрал курс Course{price=55946, duration=4, name='Python'}
-READER Thread-1выбрал курс Course{price=42512, duration=4, name='C++'}
-READER Thread-1выбрал курс Course{price=47163, duration=1, name='JJD'}
-READER Thread-1выбрал курс Course{price=3, duration=2, name='sgr'}
-READER Thread-1выбрал курс Course{price=24017, duration=1, name='JJD'}
-READER Thread-1выбрал курс Course{price=23372, duration=1, name='Node js'}
-READER Thread-1выбрал курс Course{price=53294, duration=4, name='Node js'}
-READER Thread-1выбрал курс Course{price=56835, duration=4, name='Python'}
-READER Thread-1выбрал курс Course{price=10874, duration=2, name='Python'}
-READER Thread-1выбрал курс Course{price=46516, duration=3, name='Node js'}
-READER Thread-1выбрал курс Course{price=54002, duration=2, name='Python'}
-READER Thread-1выбрал курс Course{price=15591, duration=3, name='Python'}
-READER Thread-1выбрал курс Course{price=34434, duration=3, name='C++'}
-READER Thread-1выбрал курс Course{price=46710, duration=4, name='Node js'}
-READER Thread-1выбрал курс Course{price=32737, duration=1, name='Node js'}
-READER Thread-1выбрал курс Course{price=31711, duration=2, name='Python'}
-READER Thread-1выбрал курс Course{price=26144, duration=1, name='C++'}
-READER Thread-1выбрал курс Course{price=25503, duration=4, name='C++'}
-READER Thread-1выбрал курс Course{price=31452, duration=3, name='C++'}
-READER Thread-1выбрал курс Course{price=47818, duration=4, name='JJD'}
-READER Thread-1выбрал курс Course{price=29484, duration=2, name='JJD'}
-READER Thread-1выбрал курс Course{price=51040, duration=4, name='JJD'}
-READER Thread-1выбрал курс Course{price=45225, duration=1, name='Node js'}
-READER Thread-1выбрал курс Course{price=23357, duration=2, name='JJD'}
-READER Thread-1выбрал курс Course{price=34040, duration=3, name='Node js'}
-READER Thread-1выбрал курс Course{price=29744, duration=3, name='JJD'}
-READER Thread-1выбрал курс Course{price=18130, duration=4, name='C++'}
+READER Thread-4выбрал курс Course{price=33953, duration=1, name='JJD'}
+READER Thread-3выбрал курс Course{price=26765, duration=3, name='Python'}
+READER Thread-5выбрал курс Course{price=19234, duration=4, name='Python'}
+
+READER Thread-4выбрал курс Course{price=18337, duration=1, name='Node js'}
+READER Thread-3выбрал курс Course{price=13233, duration=1, name='C++'}
+READER Thread-5выбрал курс Course{price=32042, duration=1, name='JJD'}
+READER Thread-4выбрал курс Course{price=11143, duration=2, name='Node js'}
+READER Thread-3выбрал курс Course{price=47868, duration=3, name='JJD'}
+READER Thread-1выбрал курс Course{price=16798, duration=1, name='C++'}
+READER Thread-5выбрал курс Course{price=23528, duration=2, name='C++'}
+READER Thread-4выбрал курс Course{price=15868, duration=2, name='Node js'}
+READER Thread-3выбрал курс Course{price=14405, duration=1, name='JJD'}
+READER Thread-1выбрал курс Course{price=38444, duration=3, name='JJD'}
+READER Thread-5выбрал курс Course{price=40685, duration=4, name='C++'}
+READER Thread-4выбрал курс Course{price=30400, duration=4, name='C++'}
+READER Thread-3выбрал курс Course{price=13232, duration=3, name='C++'}
+READER Thread-1выбрал курс Course{price=45633, duration=2, name='Python'}
+READER Thread-5выбрал курс Course{price=47074, duration=3, name='Node js'}
+READER Thread-3выбрал курс Course{price=20042, duration=2, name='JJD'}
+READER Thread-4выбрал курс Course{price=20489, duration=3, name='Python'}
+READER Thread-1выбрал курс Course{price=47631, duration=2, name='C++'}
+READER Thread-5выбрал курс Course{price=17573, duration=4, name='Python'}
+READER Thread-3выбрал курс Course{price=12455, duration=3, name='JJD'}
+READER Thread-4выбрал курс Course{price=46463, duration=2, name='Node js'}
+READER Thread-1выбрал курс Course{price=36462, duration=3, name='Node js'}
+READER Thread-5выбрал курс Course{price=56085, duration=2, name='C++'}
+READER Thread-3выбрал курс Course{price=45387, duration=3, name='C++'}
+READER Thread-4выбрал курс Course{price=55687, duration=2, name='C++'}
+READER Thread-1выбрал курс Course{price=10066, duration=3, name='JJD'}
+READER Thread-5выбрал курс Course{price=34137, duration=4, name='C++'}
+READER Thread-3выбрал курс Course{price=43901, duration=3, name='Node js'}
+READER Thread-4выбрал курс Course{price=55089, duration=1, name='Node js'}
+READER Thread-1выбрал курс Course{price=16813, duration=4, name='JJD'}
+READER Thread-5выбрал курс Course{price=38592, duration=4, name='Node js'}
+READER Thread-3выбрал курс Course{price=24687, duration=3, name='Node js'}
+READER Thread-1выбрал курс Course{price=23279, duration=4, name='C++'}
+READER Thread-4выбрал курс Course{price=22266, duration=2, name='Node js'}
+READER Thread-5выбрал курс Course{price=33634, duration=2, name='Node js'}
+READER Thread-3выбрал курс Course{price=43260, duration=1, name='C++'}
+READER Thread-1выбрал курс Course{price=20530, duration=3, name='Node js'}
+READER Thread-4выбрал курс Course{price=59771, duration=4, name='Node js'}
+READER Thread-5выбрал курс Course{price=33244, duration=1, name='JJD'}
+READER Thread-4выбрал курс Course{price=48511, duration=3, name='Python'}
+READER Thread-3выбрал курс Course{price=33664, duration=2, name='JJD'}
+READER Thread-1выбрал курс Course{price=27743, duration=3, name='Node js'}
+READER Thread-5выбрал курс Course{price=26189, duration=2, name='C++'}
+READER Thread-3выбрал курс Course{price=11581, duration=4, name='Node js'}
+READER Thread-4выбрал курс Course{price=22655, duration=2, name='C++'}
+READER Thread-1выбрал курс Course{price=16071, duration=2, name='Python'}
+READER Thread-5выбрал курс Course{price=45898, duration=4, name='C++'}
+READER Thread-3выбрал курс Course{price=44463, duration=3, name='Python'}
+READER Thread-4выбрал курс Course{price=58852, duration=2, name='Node js'}
+READER Thread-1выбрал курс Course{price=22369, duration=3, name='Python'}
+READER Thread-5выбрал курс Course{price=32826, duration=4, name='C++'}
+READER Thread-1выбрал курс Course{price=20155, duration=1, name='Python'}
+READER Thread-3выбрал курс Course{price=10112, duration=2, name='Node js'}
+READER Thread-5выбрал курс Course{price=48557, duration=2, name='JJD'}
+READER Thread-4выбрал курс Course{price=46632, duration=1, name='JJD'}
+READER Thread-3выбрал курс Course{price=44617, duration=1, name='Python'}
+READER Thread-1выбрал курс Course{price=25251, duration=2, name='C++'}
+READER Thread-5выбрал курс Course{price=51350, duration=1, name='Node js'}
+READER Thread-4выбрал курс Course{price=50061, duration=2, name='Python'}
+READER Thread-3выбрал курс Course{price=57456, duration=1, name='Python'}
+READER Thread-4выбрал курс Course{price=40666, duration=1, name='C++'}
+READER Thread-5выбрал курс Course{price=55583, duration=4, name='Node js'}
+READER Thread-1выбрал курс Course{price=45979, duration=4, name='Python'}
+READER Thread-3выбрал курс Course{price=35566, duration=1, name='Node js'}
+READER Thread-4выбрал курс Course{price=49058, duration=3, name='C++'}
+READER Thread-1выбрал курс Course{price=40746, duration=1, name='JJD'}
+READER Thread-5выбрал курс Course{price=49708, duration=2, name='Python'}
+READER Thread-3выбрал курс Course{price=36005, duration=3, name='Node js'}
+READER Thread-4выбрал курс Course{price=37520, duration=3, name='JJD'}
+READER Thread-1выбрал курс Course{price=29367, duration=2, name='JJD'}
+READER Thread-5выбрал курс Course{price=38502, duration=1, name='C++'}
+READER Thread-3выбрал курс Course{price=45183, duration=4, name='Python'}
+READER Thread-4выбрал курс Course{price=14503, duration=4, name='Python'}
+READER Thread-1выбрал курс Course{price=41030, duration=4, name='Node js'}
+READER Thread-5выбрал курс Course{price=44091, duration=3, name='Python'}
+READER Thread-3выбрал курс Course{price=42876, duration=3, name='Python'}
+READER Thread-4выбрал курс Course{price=46221, duration=3, name='Node js'}
+READER Thread-1выбрал курс Course{price=42367, duration=4, name='Node js'}
+READER Thread-5выбрал курс Course{price=45426, duration=2, name='Node js'}
+READER Thread-4выбрал курс Course{price=35003, duration=4, name='Python'}
+READER Thread-3выбрал курс Course{price=48454, duration=3, name='Python'}
+READER Thread-1выбрал курс Course{price=12445, duration=2, name='Python'}
+READER Thread-5выбрал курс Course{price=34909, duration=2, name='JJD'}
+READER Thread-3выбрал курс Course{price=52391, duration=3, name='C++'}
+READER Thread-4выбрал курс Course{price=59277, duration=2, name='C++'}
+READER Thread-1выбрал курс Course{price=41356, duration=1, name='Node js'}
+READER Thread-5выбрал курс Course{price=38369, duration=2, name='C++'}
+READER Thread-3выбрал курс Course{price=31287, duration=3, name='Node js'}
+READER Thread-4выбрал курс Course{price=31575, duration=4, name='JJD'}
+READER Thread-1выбрал курс Course{price=33291, duration=4, name='Python'}
+READER Thread-5выбрал курс Course{price=12160, duration=2, name='JJD'}
+READER Thread-3выбрал курс Course{price=38730, duration=2, name='Node js'}
+READER Thread-4выбрал курс Course{price=34360, duration=1, name='Python'}
+READER Thread-1выбрал курс Course{price=10841, duration=4, name='C++'}
+READER Thread-5выбрал курс Course{price=16426, duration=3, name='JJD'}
+READER Thread-4выбрал курс Course{price=14813, duration=2, name='JJD'}
+READER Thread-3выбрал курс Course{price=23523, duration=2, name='JJD'}
+READER Thread-1выбрал курс Course{price=43708, duration=2, name='Node js'}
+READER Thread-5выбрал курс Course{price=10650, duration=3, name='C++'}
+READER Thread-4выбрал курс Course{price=46696, duration=1, name='Node js'}
+READER Thread-3выбрал курс Course{price=34681, duration=2, name='Python'}
+READER Thread-1выбрал курс Course{price=32812, duration=3, name='Python'}
+READER Thread-5выбрал курс Course{price=59197, duration=2, name='Node js'}
+READER Thread-3выбрал курс Course{price=29932, duration=2, name='Node js'}
+READER Thread-4выбрал курс Course{price=32137, duration=2, name='C++'}
+READER Thread-1выбрал курс Course{price=19915, duration=1, name='C++'}
+READER Thread-5выбрал курс Course{price=58367, duration=4, name='Node js'}

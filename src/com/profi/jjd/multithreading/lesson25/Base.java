@@ -22,6 +22,7 @@ public class Base {
         Thread readerThread = new Thread(reader); // NEW
         readerThread.start(); // RUNNABLE
 
+
         // public abstract void run();
         Runnable runnable = ()->{
             System.out.println("lambdaThread");
@@ -29,10 +30,21 @@ public class Base {
         Thread lambdaThread = new Thread(runnable); // NEW
         lambdaThread.start();
 
+        Thread reader2 = new Thread(new Reader(courses));
+        Thread reader3 = new Thread(new Reader(courses));
+        Thread reader4 = new Thread(new Reader(courses));
 
+        reader2.setPriority(Thread.MAX_PRIORITY); // 10
+        reader3.setPriority(7);
+        reader4.setPriority(Thread.MIN_PRIORITY); // 1
 
+        System.out.println(reader2.getPriority());
 
+        reader2.start();
+        reader3.start();
+        reader4.start();
 
+        System.out.println(Runtime.getRuntime().availableProcessors());
 
     }
 }
