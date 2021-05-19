@@ -6,5 +6,8 @@ public class WaitNotify {
         // wait(mls)
         // notify()
         // notifyAll()
+        Library library = new Library();
+        new Thread(new PutThread(library)).start();
+        new Thread(new GetThread(library)).start();
     }
 }
