@@ -14,6 +14,9 @@ public class IncrementThread extends Thread{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        account.changeBalance(10);
+        synchronized (account){
+            // синхронизированный блок
+            account.changeBalance(10);
+        }
     }
 }

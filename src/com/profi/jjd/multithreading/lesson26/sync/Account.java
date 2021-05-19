@@ -11,6 +11,7 @@ public class Account {
         return balance;
     }
 
+//    public synchronized void changeBalance(int count){
     public void changeBalance(int count){
         balance += count;
     }
