@@ -1,0 +1,2 @@
+1. Написать реализацию метода public void run() класса  Transaction двумя разными способами.
+2. Подсчитать топ 10 слов параллельно. Количество потоков - Runtime.getRuntime().availableProcessors().
