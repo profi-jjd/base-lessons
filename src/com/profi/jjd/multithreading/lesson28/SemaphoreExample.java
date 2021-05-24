@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreExample {
     public static void main(String[] args) {
         Semaphore semaphore = new Semaphore(1);
-        semaphore = new Semaphore(1, true); // 0
+        semaphore = new Semaphore(1, true);
 
         HashSet<String> set = new HashSet<>();
         // 0
@@ -25,6 +25,10 @@ public class SemaphoreExample {
                 // finalSemaphore.release(n);
             }
         };
+
+        new Thread(runnable).start();
+        new Thread(runnable).start();
+        new Thread(runnable).start();
 
     }
 }
