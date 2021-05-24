@@ -68,6 +68,4 @@ public class MapTask {
                 " sometimes on purpose injected humour and the like";
 
     }
-
 }
-
